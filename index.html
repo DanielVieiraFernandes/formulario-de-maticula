@@ -26,6 +26,51 @@
             Preencha os dados abaixo para matricular seu filho na escola de
             educação infantil Estrelas do Amanhã.
           </p>
+
+          <form method="post" enctype="multipart/form-data">
+            <fieldset class="child-info">
+              <legend>Informações da criança</legend>
+              <div class="input-wrapper">
+                <label for="fullname">Nome completo</label>
+                <input
+                  id="fullname"
+                  name="fullname"
+                  type="text"
+                  placeholder="Qual o nome da criança"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="birth">Data de nascimento</label>
+                <input type="date" id="birth" name="birth" lang="pt-BR" />
+              </div>
+
+              <div class="select-wrapper">
+                <label for="gender">Sexo</label>
+                <select name="gender" id="gender">
+                    <option value="female">Feminino</option>
+                    <option value="male">Masculino</option>
+                    <option value="na">Prefiro não responder</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="medical-info">Informações médicas</label>
+                <textarea name="medical-info" id="medical-info"
+                cols="30"
+                rows="10"
+                placeholder="A criança possui alguma condição médica que a escola deve estar ciente? se sim, especifique."
+                ></textarea>
+              </div>
+
+              <div class="droparea-wrapper">
+                <input type="file" name="birth-file" id="birth-file">
+                <img src="assets/icons/cloud-upload.svg" alt="">
+                <p>Clique aqui para <br> selecionar os arquivos</p>
+              </div>
+
+            </fieldset>
+          </form>
         </div>
       </main>
 
@@ -40,7 +85,10 @@
             </p>
           </header>
 
-          <img src="assets/Illustration.svg" alt="Ilustração de uma professora com crianças prestando atenção">
+          <img
+            src="assets/Illustration.svg"
+            alt="Ilustração de uma professora com crianças prestando atenção"
+          />
         </div>
       </aside>
     </div>
