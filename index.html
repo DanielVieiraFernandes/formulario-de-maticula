@@ -100,6 +100,35 @@
                 </div>
               </div>
             </fieldset>
+            <fieldset class="address">
+              <legend>Endereço residencial</legend>
+              <div class="input-wrapper">
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" />
+              </div>
+
+              <div class="flex">
+                <div class="input-wrapper flex-2">
+                  <label for="street">Rua</label>
+                  <input type="text" name="street" id="street" value="Rua das flores" disabled/>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="number">Número</label>
+                  <input type="number" name="number" id="number" value="123"/>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="input-wrapper flex-2">
+                  <label for="city">Cidade</label>
+                  <input type="text" name="city" id="city" value="São Paulo" disabled/>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="state">Estado</label>
+                  <input type="text" name="state" id="state" value="SP" disabled />
+                </div>
+
+              </div>
+            </fieldset>
           </form>
         </div>
       </main>
