@@ -1,13 +1,40 @@
+/* Garante que o body pode rolar */
+html, body {
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   display: grid;
   grid-template-columns: 51.25% 48.75%;
+  min-height: 100vh; /* melhor que height fixa para permitir crescimento */
+  overflow: visible; /* remove o bloqueio de scroll */
+}
 
-  height: 100vh;
-  overflow: hidden;
+/* Responsivo */
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  main, aside {
+    padding: 2rem;
+  }
+
+  main .main-container,
+  aside .aside-container {
+    margin: 0 auto;
+  }
+
+  aside {
+    order: -1; /* opcional */
+  }
 }
 
 main {
-  overflow: auto;
   padding: 4rem;
 
   & .main-container {
@@ -44,6 +71,7 @@ aside {
   & h2 {
     font: 600 2.5rem/1.25 var(--font-family);
     margin-bottom: 0.5rem;
+
     & span {
       color: var(--text-highlight);
     }
